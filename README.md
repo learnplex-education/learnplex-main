@@ -34,6 +34,12 @@ Open [http://localhost:3000](http://localhost:3000) in your browser to view the 
 
 ---
 
+## Contributing
+
+We welcome contributions from student fellows and the community. See **[CONTRIBUTING.md](CONTRIBUTING.md)** for the Branch → PR → Review workflow, task discovery, and coding standards.
+
+---
+
 ## License
 
 This project is open source under the **MIT License**.
