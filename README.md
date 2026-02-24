@@ -1,12 +1,20 @@
-# LearnPlex Education | Nonprofit Engineering Lab
+# Learnplex Education | Open-Source Lab
 
-**LearnPlex Education** is a 501(c)(3) nonprofit engineering lab building the next generation of engineers through real-world software, open-access resources, and fellowship programs.
+**Learnplex Education** is a 501(c)(3) nonprofit student-focused open-source lab designing and shipping production-grade software to democratize access to education.
 
 ---
 
-## Mission Statement
+## Mission
 
 > Democratizing educational success by removing barriers to high-quality learning tools and professional development.
+
+---
+
+## The Lab
+
+- **Methodology:** We follow an "Experimentation to Publication" pipeline: we build in public, ensuring every project serves as a technical roadmap for the next generation of students.
+- **Lab Tracks:** **Core Interns (Infrastructure)** are the architects of the Lab — they manage the core platform, deployment pipelines, and internal tools. **Product Fellows (Innovation)** are the researchers — they work in cross-functional squads to build specific tools that run on that platform.
+- **Tiered Mentorship:** Peer-to-peer guidance from lead interns is paired with professional insights from our industry network.
 
 ---
 

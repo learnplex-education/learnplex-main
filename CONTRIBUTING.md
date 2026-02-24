@@ -1,4 +1,4 @@
-# Contributing to LearnPlex Education
+# Contributing to Learnplex Education
 
 This guide is the **Standard Operating Procedure (SOP)** for anyone joining the organization. Whether you’re an Engineering Intern or an EdTech Fellow, follow these roles, task assignment rules, and workflow.
 
@@ -6,11 +6,11 @@ This guide is the **Standard Operating Procedure (SOP)** for anyone joining the 
 
 ## The Roles
 
-LearnPlex runs two distinct contributor paths:
+Learnplex runs two distinct contributor paths:
 
 | Role | Focus |
 |------|--------|
-| **Engineering Interns** | Direct contributors to **LearnPlex Core** — the main website, deployment pipelines, and internal tools. |
+| **Engineering Interns** | Direct contributors to **Learnplex Core** — the main website, deployment pipelines, and internal tools. |
 | **EdTech Fellows** | Project-based contributors who build the **Learning Tools** that interns help deploy and maintain. |
 
 Interns own the core product and infrastructure; Fellows own the educational applications and experiences that run on that foundation.
@@ -20,7 +20,7 @@ Interns own the core product and infrastructure; Fellows own the educational app
 ## Task Assignment
 
 - **Interns** — Work on issues labeled **`Internship: Core`** in this repository and in core-related repos. These cover the main site, styling, metadata, deployment, and internal tooling.
-- **Fellows** — Work on **project-specific repositories** under the [LearnPlex organization](https://github.com/learnplex-education). Pick tasks from the Fellowship Roadmap and the issues in the repo for the learning tool you’re building.
+- **Fellows** — Work on **project-specific repositories** under the [Learnplex organization](https://github.com/learnplex-education). Pick tasks from the Fellowship Roadmap and the issues in the repo for the learning tool you’re building.
 
 Check the GitHub Project Board (**Fellowship Roadmap 2026**) and issue labels to see what’s available for your role.
 
@@ -28,7 +28,7 @@ Check the GitHub Project Board (**Fellowship Roadmap 2026**) and issue labels to
 
 ## GitHub Labeling Guide
 
-Use these labels to keep work searchable and consistent across the LearnPlex organization.
+Use these labels to keep work searchable and consistent across the Learnplex organization.
 
 - **Intern tasks** — Label with **`Role: Intern`**. These focus on **core infrastructure** and the **main website**.
 - **Fellow tasks** — Label with **`Role: Fellow`**. These focus on **individual EdTech products**.

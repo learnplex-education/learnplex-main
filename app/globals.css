@@ -19,8 +19,58 @@
   }
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Fade-in for section visibility (Intern: used by page sections) */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.5s ease-out forwards;
+}
+
+/* Hero card outer glow pulse */
+@keyframes hero-glow {
+  0%,
+  100% {
+    box-shadow:
+      0 10px 15px -3px rgb(0 0 0 / 0.1),
+      0 4px 6px -4px rgb(0 0 0 / 0.1),
+      0 0 30px -5px rgba(99, 102, 241, 0.25);
+  }
+  50% {
+    box-shadow:
+      0 10px 15px -3px rgb(0 0 0 / 0.1),
+      0 4px 6px -4px rgb(0 0 0 / 0.1),
+      0 0 30px -5px rgba(99, 102, 241, 0.35);
+  }
+}
+
+.animate-hero-glow {
+  animation: hero-glow 3s ease-in-out infinite;
+}
+
+/* Blueprint-style grid for recruitment pages (internship/fellowship) */
+.bg-blueprint-grid {
+  background-color: rgb(2 6 23);
+  background-image:
+    linear-gradient(rgba(51 65 85 / 0.15) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(51 65 85 / 0.15) 1px, transparent 1px);
+  background-size: 24px 24px;
 }
