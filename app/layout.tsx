@@ -14,10 +14,36 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Learnplex Education | Nonprofit Engineering Lab",
+  metadataBase: new URL("https://learnplex.org"),
+  title: "Learnplex | Student-Powered Open-Source Education Lab",
   description:
-    "A 501(c)(3) nonprofit organization where students build real-world software through a 'pay-it-forward' fellowship model.",
+    "Learnplex Education is a 501(c)(3) nonprofit lab building open-source learning tools and launching technical careers.",
+  keywords: [
+    "Learnplex Education",
+    "Learnplex",
+    "Open Source Lab",
+    "UC Berkeley EdTech",
+    "Student-Powered Lab",
+  ],
   icons: { icon: "/logobigclear.png" },
+  openGraph: {
+    url: "https://learnplex.org",
+    siteName: "Learnplex",
+    title: "Learnplex | Student-Powered Open-Source Education Lab",
+    description:
+      "Learnplex Education is a 501(c)(3) nonprofit lab building open-source learning tools and launching technical careers.",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Learnplex",
+      },
+    ],
+  },
+  alternates: {
+    canonical: "https://learnplex.org",
+  },
 };
 
 export default function RootLayout({

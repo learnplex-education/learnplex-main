@@ -3,7 +3,8 @@
  */
 
 import type { Metadata } from "next";
-import { Scale, GitBranch, Layers, Users, User } from "lucide-react";
+import { Scale, GitBranch, Layers, Users, Check } from "lucide-react";
+import PlexBackground from "@/components/PlexBackground";
 
 export const metadata: Metadata = {
   title: "About Us | Learnplex Education",
@@ -13,7 +14,7 @@ export const metadata: Metadata = {
 
 export default function AboutPage() {
   return (
-    <div className="min-h-screen bg-slate-950 font-sans">
+    <div className="min-h-screen bg-[#08246c] font-sans">
       <main className="mx-auto max-w-3xl px-6 py-16">
         <h1 className="text-2xl font-semibold text-white sm:text-3xl">
           A Foundation for Educational Equity
@@ -104,7 +105,7 @@ export default function AboutPage() {
         </section>
 
         {/* Legal & contact */}
-        <section className="mt-12 rounded-lg border border-slate-800 bg-slate-900/50 p-6 sm:mt-16">
+        <section className="mt-12 rounded-lg border border-slate-800 bg-[#08246c]/60 p-6 sm:mt-16">
           <h2 className="text-base font-semibold text-white">
             Legal & transparency
           </h2>
@@ -126,34 +127,100 @@ export default function AboutPage() {
         {/* Horizontal divider before Founder — personal, separate feel */}
         <hr className="mt-12 border-slate-800 sm:mt-16" />
 
-        {/* Founder: closing section — Berkeley to Industry (Deloitte) as proof of mission */}
-        <section className="mt-12 rounded-lg bg-slate-900/30 px-6 py-8 sm:mt-16 sm:px-8 sm:py-10">
-          <div className="flex gap-4">
-            <User
-              className="h-6 w-6 shrink-0 text-indigo-400 sm:h-7 sm:w-7"
+        {/* Note from our Founder — professional card with Plex background */}
+        <section
+          className="mt-12 sm:mt-16"
+          aria-labelledby="founder-note-heading"
+        >
+          <div className="relative mx-auto max-w-5xl overflow-hidden rounded-2xl border border-slate-800 bg-[#08246c]/60 p-10 shadow-[0_0_30px_-5px_rgba(99,102,241,0.4)]">
+            {/* Faint non-interactive Plex background clipped to card */}
+            <div
+              className="pointer-events-none absolute inset-0 opacity-[0.1]"
               aria-hidden
-            />
-            <div>
-              <h2 className="text-lg font-semibold text-white sm:text-xl">
-                A note from our founder
-              </h2>
-              <p className="mt-4 text-sm leading-relaxed text-slate-400 sm:text-base">
-                Learnplex was born out of a simple observation during my time at
-                UC Berkeley: the most effective learning tools are often the
-                hardest to access. As I prepared to enter the professional world
-                of Data & AI, I wanted to build a space where students could gain
-                real-world experience while building tools that help others
-                succeed.
-              </p>
-              <p className="mt-4 text-sm leading-relaxed text-slate-400 sm:text-base">
-                The bridge between Berkeley and industry — I now work in Data &
-                AI at Deloitte Consulting LLP — is proof that the mission works:
-                hands-on building and mentorship create sustainable pathways into
-                tech. <strong className="text-white">Michael Florip</strong> is a
-                Berkeley-trained engineer dedicated to ensuring the next
-                generation doesn&apos;t have to choose between access and
-                opportunity.
-              </p>
+            >
+              <PlexBackground />
+            </div>
+
+            <div className="relative z-10 grid gap-10 md:grid-cols-[1fr_0.65fr]">
+              {/* Left column (60): The "Why" */}
+              <div>
+                <h2
+                  id="founder-note-heading"
+                  className="bg-gradient-to-r from-white to-slate-400 bg-clip-text text-xl font-semibold text-transparent sm:text-2xl"
+                >
+                  A Note from our Founder
+                </h2>
+                <p className="mt-6 text-sm leading-relaxed text-slate-400 sm:text-base">
+                  Learnplex began with a simple observation at UC Berkeley: the
+                  most talented student builders often lacked a professional
+                  bridge to industry, and the most powerful educational tools
+                  were often locked behind paywalls.
+                </p>
+                <p className="mt-4 text-sm leading-relaxed text-slate-400 sm:text-base">
+                  We founded this lab to change that. As a 501(c)(3) nonprofit,
+                  our mission is twofold: to build production-grade,
+                  open-source software that stays free forever, and to provide
+                  students with a &quot;sandbox&quot; that mirrors the highest
+                  standards of the tech industry.
+                </p>
+                <p className="mt-4 text-sm leading-relaxed text-slate-400 sm:text-base">
+                  Whether you&apos;re a student looking to ship your first
+                  major feature or a professional looking to mentor the next
+                  generation, you have a place in the Plex.
+                </p>
+                <p className="mt-8 font-medium italic text-indigo-400">
+                  — Michael Florip
+                </p>
+                <a
+                  href="https://www.linkedin.com/in/michaelflorip"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-4 inline-flex h-10 items-center justify-center rounded-lg border border-slate-600 px-4 text-sm font-medium text-slate-300 transition-colors hover:border-indigo-500 hover:text-indigo-400"
+                >
+                  Connect on LinkedIn
+                </a>
+              </div>
+
+              {/* Right column (40): The 2026 Vision */}
+              <div>
+                <p className="text-xs font-medium uppercase tracking-widest text-slate-500">
+                  The 2026 Vision
+                </p>
+                <ul className="mt-6 space-y-4">
+                  <li className="flex gap-3">
+                    <Check
+                      className="h-5 w-5 shrink-0 text-indigo-400"
+                      aria-hidden
+                    />
+                    <span className="text-sm leading-relaxed text-slate-400">
+                      <strong className="text-slate-300">Scale:</strong> Expand
+                      the FuturePlex Fellowship to 50+ students across the US.
+                    </span>
+                  </li>
+                  <li className="flex gap-3">
+                    <Check
+                      className="h-5 w-5 shrink-0 text-indigo-400"
+                      aria-hidden
+                    />
+                    <span className="text-sm leading-relaxed text-slate-400">
+                      <strong className="text-slate-300">Ship:</strong> Launch
+                      three production-grade open-source tools for the global
+                      student community.
+                    </span>
+                  </li>
+                  <li className="flex gap-3">
+                    <Check
+                      className="h-5 w-5 shrink-0 text-indigo-400"
+                      aria-hidden
+                    />
+                    <span className="text-sm leading-relaxed text-slate-400">
+                      <strong className="text-slate-300">Mentor:</strong>{" "}
+                      Onboard 20+ Industry Mentors from top-tier tech and
+                      consulting firms.
+                    </span>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </section>

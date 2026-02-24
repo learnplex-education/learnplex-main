@@ -11,16 +11,16 @@ import PlexBackground from "@/components/PlexBackground";
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen flex-col bg-slate-950 font-sans">
+    <div className="flex min-h-screen flex-col bg-[#08246c] font-sans">
       {/* ─── Hero: centered card over Plex-Graph ─── */}
       <section className="relative flex min-h-[420px] flex-col items-center justify-center px-6 py-20 sm:min-h-[480px] sm:py-28">
         <PlexBackground />
         <div
-          className="pointer-events-none absolute inset-0 z-[1] rounded-2xl bg-gradient-to-b from-slate-950/20 via-transparent to-slate-950/90"
+          className="pointer-events-none absolute inset-0 z-[1] rounded-2xl bg-gradient-to-b from-[#08246c]/20 via-transparent to-[#08246c]/90"
           aria-hidden
         />
         <div className="relative z-10 mx-auto w-full max-w-4xl">
-          <div className="animate-hero-glow flex flex-col items-center justify-center rounded-2xl border border-slate-700/50 bg-slate-900/30 p-8 text-center shadow-lg shadow-indigo-500/10 backdrop-blur-xl sm:p-10">
+          <div className="animate-hero-glow flex flex-col items-center justify-center rounded-2xl border border-slate-700/50 bg-[#08246c]/40 p-8 text-center shadow-lg shadow-indigo-500/20 backdrop-blur-xl sm:p-10">
             <h1 className="text-3xl font-semibold leading-tight tracking-tight text-white sm:text-4xl">
               Building the Future of Open-Source Education.
             </h1>
@@ -32,7 +32,7 @@ export default function Home() {
             <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
               <a
                 href="mailto:hello@learnplex.org"
-                className="inline-flex h-12 items-center justify-center rounded-lg bg-white px-6 text-sm font-medium text-slate-950 transition-colors hover:bg-slate-200 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-slate-950"
+                className="inline-flex h-12 items-center justify-center rounded-lg bg-white px-6 text-sm font-medium text-slate-950 transition-colors hover:bg-slate-200 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-[#08246c]"
               >
                 Join the Waitlist
               </a>
@@ -76,7 +76,7 @@ export default function Home() {
           </p>
           <Link
             href="/about"
-            className="group mt-8 block rounded-lg border border-slate-800 bg-slate-900/50 p-6 transition-colors hover:border-slate-700 sm:mt-10"
+            className="group mt-8 block rounded-lg border border-slate-800 bg-[#08246c]/60 p-6 transition-colors hover:border-slate-700 sm:mt-10"
           >
             <div className="grid gap-6 sm:grid-cols-3">
               <div>
@@ -146,7 +146,7 @@ export default function Home() {
           <div className="mt-12 grid gap-10 sm:grid-cols-2">
             <Link
               href="/internship"
-              className="group rounded-lg border border-slate-800 bg-slate-900/50 p-6 transition-colors hover:border-slate-700"
+              className="group rounded-lg border border-slate-800 bg-[#08246c]/60 p-6 transition-colors hover:border-slate-700"
             >
               <Shield className="h-8 w-8 text-slate-400 group-hover:text-indigo-400" aria-hidden />
               <h3 className="mt-3 text-lg font-semibold text-white transition-colors group-hover:text-indigo-400">
@@ -162,7 +162,7 @@ export default function Home() {
             </Link>
             <Link
               href="/fellowship"
-              className="group rounded-lg border border-slate-800 bg-slate-900/50 p-6 transition-colors hover:border-slate-700"
+              className="group rounded-lg border border-slate-800 bg-[#08246c]/60 p-6 transition-colors hover:border-slate-700"
             >
               <Sparkles className="h-8 w-8 text-slate-400 group-hover:text-indigo-400" aria-hidden />
               <h3 className="mt-3 text-lg font-semibold text-white transition-colors group-hover:text-indigo-400">
@@ -195,7 +195,7 @@ export default function Home() {
             From industry experts to lead interns to alumni — a pay-it-forward
             model so every contributor can ship.
           </p>
-          <div className="group mt-10 rounded-xl border border-slate-800 bg-slate-900/50 p-8 transition-colors hover:border-slate-700">
+          <div className="group mt-10 rounded-xl border border-slate-800 bg-[#08246c]/60 p-8 transition-colors hover:border-slate-700">
             <div className="grid gap-8 sm:grid-cols-3">
               <div>
                 <Briefcase
@@ -267,7 +267,7 @@ export default function Home() {
       </section>
 
       {/* ─── Transparency Footer: 501(c)(3) ID, GitHub, copyright ─── */}
-      <footer className="border-t border-slate-800 bg-slate-950 px-6 py-8 text-center text-sm text-slate-400">
+      <footer className="border-t border-slate-800 bg-[#08246c] px-6 py-8 text-center text-sm text-slate-400">
         <div className="flex justify-center gap-6">
           <a
             href="#"

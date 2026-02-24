@@ -1,8 +1,8 @@
 "use client";
 
 /**
- * PlexBackground — Static node-graph; mouse-only magnetic reactivity. Reduced density for visual balance.
- * Lines indigo-500/20 base, indigo-500/40 when cursor near. Nodes spring back to origin.
+ * PlexBackground — Static node-graph; mouse-only magnetic reactivity.
+ * Light slate/white lines and nodes for visibility on navy (#08246c) background.
  */
 
 import { useCallback, useEffect, useRef, useState } from "react";
@@ -14,10 +14,14 @@ const MOUSE_RADIUS = 200;
 const MAGNET_STRENGTH = 0.032;
 const SPRING_BACK = 0.02;
 const NODE_RADIUS = 2.5;
-const LINE_OPACITY_BASE = 0.2;
-const LINE_OPACITY_ACTIVE = 0.4;
-const NODE_OPACITY_BASE = 0.35;
+const LINE_OPACITY_BASE = 0.22;
+const LINE_OPACITY_ACTIVE = 0.42;
+const NODE_OPACITY_BASE = 0.4;
 const NODE_OPACITY_ACTIVE = 0.6;
+/* Slate-50 / white for visibility on navy */
+const LINE_COLOR = "248, 250, 252";
+const NODE_COLOR_BASE = "203, 213, 225";
+const NODE_COLOR_ACTIVE = "248, 250, 252";
 
 type Node = {
   x: number;
@@ -157,7 +161,7 @@ export default function PlexBackground() {
             const nearB = distToMouse(b.x, b.y) < MOUSE_RADIUS;
             const active = nearA || nearB;
             const opacity = active ? LINE_OPACITY_ACTIVE : LINE_OPACITY_BASE;
-            context.strokeStyle = `rgba(99, 102, 241, ${opacity})`;
+            context.strokeStyle = `rgba(${LINE_COLOR}, ${opacity})`;
             context.beginPath();
             context.moveTo(a.x, a.y);
             context.lineTo(b.x, b.y);
@@ -174,9 +178,9 @@ export default function PlexBackground() {
         context.beginPath();
         context.arc(n.x, n.y, NODE_RADIUS, 0, Math.PI * 2);
         if (inRadius) {
-          context.fillStyle = `rgba(129, 140, 248, ${NODE_OPACITY_ACTIVE})`;
+          context.fillStyle = `rgba(${NODE_COLOR_ACTIVE}, ${NODE_OPACITY_ACTIVE})`;
         } else {
-          context.fillStyle = `rgba(148, 163, 184, ${NODE_OPACITY_BASE})`;
+          context.fillStyle = `rgba(${NODE_COLOR_BASE}, ${NODE_OPACITY_BASE})`;
         }
         context.fill();
       });

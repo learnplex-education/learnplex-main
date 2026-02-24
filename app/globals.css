@@ -45,20 +45,20 @@ body {
   animation: fade-in 0.5s ease-out forwards;
 }
 
-/* Hero card outer glow pulse */
+/* Hero card outer glow pulse — lightened for contrast on navy background */
 @keyframes hero-glow {
   0%,
   100% {
     box-shadow:
       0 10px 15px -3px rgb(0 0 0 / 0.1),
       0 4px 6px -4px rgb(0 0 0 / 0.1),
-      0 0 30px -5px rgba(99, 102, 241, 0.25);
+      0 0 30px -5px rgba(99, 102, 241, 0.35);
   }
   50% {
     box-shadow:
       0 10px 15px -3px rgb(0 0 0 / 0.1),
       0 4px 6px -4px rgb(0 0 0 / 0.1),
-      0 0 30px -5px rgba(99, 102, 241, 0.35);
+      0 0 30px -5px rgba(99, 102, 241, 0.45);
   }
 }
 
