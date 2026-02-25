@@ -18,7 +18,7 @@ export default function Navbar() {
     pathname === "/internship" || pathname === "/fellowship";
 
   return (
-    <header className="fixed top-0 z-50 w-full border-b border-slate-800/60 bg-[#08246c]/80 backdrop-blur-md">
+    <header className="fixed top-0 z-50 w-full border-b border-slate-800/60 bg-slate-950/70 backdrop-blur-md">
       <nav
         className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-6 py-4"
         aria-label="Main navigation"
@@ -78,7 +78,7 @@ export default function Navbar() {
               Programs
             </Link>
             <div
-              className={`absolute right-0 top-full min-w-[160px] rounded-lg border border-slate-700 bg-[#08246c]/95 pt-2 shadow-lg transition-all duration-200 ${
+              className={`absolute right-0 top-full min-w-[160px] rounded-lg border border-slate-700 bg-slate-900 pt-2 shadow-lg transition-all duration-200 ${
                 isProgramsOpen
                   ? "translate-y-0 opacity-100"
                   : "pointer-events-none -translate-y-1 opacity-0"

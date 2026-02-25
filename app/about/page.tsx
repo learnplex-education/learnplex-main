@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 
 export default function AboutPage() {
   return (
-    <div className="min-h-screen bg-[#08246c] font-sans">
+    <div className="min-h-screen bg-slate-950 font-sans">
       <main className="mx-auto max-w-3xl px-6 py-16">
         <h1 className="text-2xl font-semibold text-white sm:text-3xl">
           A Foundation for Educational Equity
@@ -105,7 +105,7 @@ export default function AboutPage() {
         </section>
 
         {/* Legal & contact */}
-        <section className="mt-12 rounded-lg border border-slate-800 bg-[#08246c]/60 p-6 sm:mt-16">
+        <section className="mt-12 rounded-3xl border border-slate-800 bg-slate-900/50 p-6 sm:mt-16">
           <h2 className="text-base font-semibold text-white">
             Legal & transparency
           </h2>
@@ -132,7 +132,7 @@ export default function AboutPage() {
           className="mt-12 sm:mt-16"
           aria-labelledby="founder-note-heading"
         >
-          <div className="relative mx-auto max-w-5xl overflow-hidden rounded-2xl border border-slate-800 bg-[#08246c]/60 p-10 shadow-[0_0_30px_-5px_rgba(99,102,241,0.4)]">
+          <div className="relative mx-auto max-w-5xl overflow-hidden rounded-3xl border border-indigo-500/30 bg-slate-900/50 p-10 shadow-[0_0_30px_-5px_rgba(99,102,241,0.3)]">
             {/* Faint non-interactive Plex background clipped to card */}
             <div
               className="pointer-events-none absolute inset-0 opacity-[0.1]"

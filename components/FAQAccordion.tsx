@@ -65,7 +65,7 @@ export default function FAQAccordion() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
-    <div className="rounded-xl border border-slate-800 bg-[#08246c]/60 overflow-hidden">
+    <div className="rounded-3xl border border-slate-800 bg-slate-900/50 overflow-hidden">
       {FAQ_ITEMS.map((item, index) => {
         const isOpen = openIndex === index;
         const isLast = index === FAQ_ITEMS.length - 1;

@@ -54,10 +54,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} min-h-screen bg-slate-950 antialiased`}
       >
         <Navbar />
-        <div className="pt-24">{children}</div>
+        <div className="min-h-screen bg-slate-950 pt-24">{children}</div>
       </body>
     </html>
   );

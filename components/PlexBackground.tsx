@@ -2,26 +2,23 @@
 
 /**
  * PlexBackground — Static node-graph; mouse-only magnetic reactivity.
- * Light slate/white lines and nodes for visibility on navy (#08246c) background.
+ * Indigo-500/40 lines, indigo-400/70 on hover for high visibility on dark slate.
  */
 
 import { useCallback, useEffect, useRef, useState } from "react";
 
 const NODE_COUNT = 38;
 const TOP_RIGHT_COUNT = 12;
+const TOP_EDGE_COUNT = 6;
 const CONNECT_DISTANCE = 150;
 const MOUSE_RADIUS = 200;
 const MAGNET_STRENGTH = 0.032;
 const SPRING_BACK = 0.02;
 const NODE_RADIUS = 2.5;
-const LINE_OPACITY_BASE = 0.22;
-const LINE_OPACITY_ACTIVE = 0.42;
-const NODE_OPACITY_BASE = 0.4;
-const NODE_OPACITY_ACTIVE = 0.6;
-/* Slate-50 / white for visibility on navy */
-const LINE_COLOR = "248, 250, 252";
-const NODE_COLOR_BASE = "203, 213, 225";
-const NODE_COLOR_ACTIVE = "248, 250, 252";
+const LINE_OPACITY_BASE = 0.4;
+const LINE_OPACITY_ACTIVE = 0.7;
+const NODE_OPACITY_BASE = 0.35;
+const NODE_OPACITY_ACTIVE = 0.7;
 
 type Node = {
   x: number;
@@ -43,11 +40,15 @@ export default function PlexBackground() {
     const nodes: Node[] = [];
     const halfW = width * 0.5;
     const halfH = height * 0.5;
+    const topStrip = height * 0.2;
 
     for (let i = 0; i < NODE_COUNT; i++) {
       let x: number;
       let y: number;
-      if (i < TOP_RIGHT_COUNT) {
+      if (i < TOP_EDGE_COUNT) {
+        x = halfW + Math.random() * halfW;
+        y = Math.random() * topStrip;
+      } else if (i < TOP_EDGE_COUNT + TOP_RIGHT_COUNT) {
         x = halfW + Math.random() * halfW;
         y = Math.random() * halfH;
       } else {
@@ -161,7 +162,7 @@ export default function PlexBackground() {
             const nearB = distToMouse(b.x, b.y) < MOUSE_RADIUS;
             const active = nearA || nearB;
             const opacity = active ? LINE_OPACITY_ACTIVE : LINE_OPACITY_BASE;
-            context.strokeStyle = `rgba(${LINE_COLOR}, ${opacity})`;
+            context.strokeStyle = `rgba(99, 102, 241, ${opacity})`;
             context.beginPath();
             context.moveTo(a.x, a.y);
             context.lineTo(b.x, b.y);
@@ -178,9 +179,9 @@ export default function PlexBackground() {
         context.beginPath();
         context.arc(n.x, n.y, NODE_RADIUS, 0, Math.PI * 2);
         if (inRadius) {
-          context.fillStyle = `rgba(${NODE_COLOR_ACTIVE}, ${NODE_OPACITY_ACTIVE})`;
+          context.fillStyle = `rgba(129, 140, 248, ${NODE_OPACITY_ACTIVE})`;
         } else {
-          context.fillStyle = `rgba(${NODE_COLOR_BASE}, ${NODE_OPACITY_BASE})`;
+          context.fillStyle = `rgba(148, 163, 184, ${NODE_OPACITY_BASE})`;
         }
         context.fill();
       });
@@ -203,7 +204,11 @@ export default function PlexBackground() {
   }, [mounted, initNodes]);
 
   return (
-    <div ref={containerRef} className="absolute inset-0 z-0 overflow-hidden rounded-2xl" aria-hidden>
+    <div
+      ref={containerRef}
+      className="absolute inset-0 top-0 left-0 z-0 h-full w-full overflow-visible"
+      aria-hidden
+    >
       <canvas ref={canvasRef} className="absolute inset-0 h-full w-full" />
     </div>
   );
